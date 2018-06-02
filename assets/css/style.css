@@ -178,3 +178,16 @@
 	background-color: #f53b57;
 	color: #ffffff;
 }
+
+/* CSS for Login */
+.login{
+	width: 20%;
+	margin: 10% auto;
+	padding: 5%; 
+	background-color: #dfe6e9;
+	box-shadow: 0 3px 5px 2px grey;
+}
+.login h1{
+	text-align: center;
+	font-weight: normal;
+}
