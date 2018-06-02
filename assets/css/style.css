@@ -27,8 +27,7 @@
 	padding: 5px;
 }
 .btn-primary{
-	border: none;;
-	padding: 5px;
+	border: none;
 	background-color: #474787;
 	color: #d1ccc0;
 	transition: 0.4s all ease;
@@ -36,36 +35,39 @@
 .btn-primary:hover{
 	background-color: #706fd3;
 	transition: 0.4s all ease;
+	cursor: pointer;
 }
 
 .btn-success{
-	padding: 5px;
+	border: none;
 	background-color: #218c74;
 	color: #d1ccc0;
 }
 .btn-success:hover{
-	background-color: #33d9b2;
+	background-color: #05c46b;
 	transition: 0.4s all ease;
+	cursor: pointer;
 }
 
 .btn-error{
-	padding: 5px;
+	border: none;
 	background-color: #b33939;
 	color: #d1ccc0;
 }
 .btn-error:hover{
 	background-color: #ff5252;
 	transition: 0.4s all ease;
+	cursor: pointer;
 }
 
 .btn-sm{
-
+	padding: 5px;
 }
 .btn-md{
-	
+	padding: 10px;
 }
 .btn-lg{
-	
+	padding: 15px;
 }
 
 /* CSS for Header Section */
@@ -83,6 +85,10 @@
 }
 .header .menu ul{
 	list-style-type: none;
+}
+.header .menu .right{
+	float: right;
+	text-align: right;
 }
 .header .menu ul li{
 	display: inline-block;
