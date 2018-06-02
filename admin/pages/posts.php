@@ -12,6 +12,11 @@
 			echo $_SESSION['edit'];
 			unset($_SESSION['edit']);
 		}
+		if(isset($_SESSION['delete']))
+		{
+			echo $_SESSION['delete'];
+			unset($_SESSION['delete']);
+		}
 	?>
 	<table class="tbl-responsive">
 		<tr>
@@ -51,7 +56,7 @@
 							<td><?php echo $is_featured; ?></td>
 							<td>
 								<a href="<?php echo SITEURL; ?>admin/index.php?page=edit_post&id=<?php echo $id; ?>" class="btn-success btn-sm">Edit</a> 
-								<a href="#" class="btn-error btn-sm">Delete</a>
+								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=posts&id=<?php echo $id; ?>" class="btn-error btn-sm">Delete</a>
 							</td>
 						</tr>
 						<?php

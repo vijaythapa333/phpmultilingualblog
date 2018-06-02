@@ -8,6 +8,16 @@
 			echo $_SESSION['add'];
 			unset($_SESSION['add']);
 		}
+		if(isset($_SESSION['edit']))
+		{
+			echo $_SESSION['edit'];
+			unset($_SESSION['edit']);
+		}
+		if(isset($_SESSION['delete']))
+		{
+			echo $_SESSION['delete'];
+			unset($_SESSION['delete']);
+		}
 	?>
 
 	<table class="tbl-responsive">
@@ -52,7 +62,7 @@
 							<td><?php echo $include_in_menu; ?></td>
 							<td>
 								<a href="<?php echo SITEURL; ?>admin/index.php?page=edit_category&id=<?php echo $id; ?>" class="btn-success btn-sm">Edit</a>  
-								<a href="#" class="btn-error btn-sm">Delete</a>
+								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=categories&id=<?php echo $id; ?>" class="btn-error btn-sm">Delete</a>
 							</td>
 						</tr>
 
