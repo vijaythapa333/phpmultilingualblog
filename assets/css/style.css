@@ -12,7 +12,6 @@
 	line-height: 25px;
 }
 .wrapper{
-	border: 1px solid red;
 	width: 80%;
 	padding: 1%;
 	margin: 0 auto;
@@ -22,53 +21,7 @@
 	clear: both;
 }
 
-/* CSS for Buttons */
-.btn-default{
-	padding: 5px;
-}
-.btn-primary{
-	border: none;
-	background-color: #474787;
-	color: #d1ccc0;
-	transition: 0.4s all ease;
-}
-.btn-primary:hover{
-	background-color: #706fd3;
-	transition: 0.4s all ease;
-	cursor: pointer;
-}
 
-.btn-success{
-	border: none;
-	background-color: #218c74;
-	color: #d1ccc0;
-}
-.btn-success:hover{
-	background-color: #05c46b;
-	transition: 0.4s all ease;
-	cursor: pointer;
-}
-
-.btn-error{
-	border: none;
-	background-color: #b33939;
-	color: #d1ccc0;
-}
-.btn-error:hover{
-	background-color: #ff5252;
-	transition: 0.4s all ease;
-	cursor: pointer;
-}
-
-.btn-sm{
-	padding: 5px;
-}
-.btn-md{
-	padding: 10px;
-}
-.btn-lg{
-	padding: 15px;
-}
 
 /* CSS for Header Section */
 .header{
@@ -133,4 +86,94 @@
 .footer a:hover{
 	color: #ffb142;
 	transition: 0.4s all e
+}
+
+/* CSS for Buttons */
+.btn-default{
+	padding: 5px;
+}
+.btn-primary{
+	border: none;
+	background-color: #474787;
+	color: #d1ccc0;
+	transition: 0.4s all ease;
+}
+.btn-primary:hover{
+	background-color: #706fd3;
+	transition: 0.4s all ease;
+	cursor: pointer;
+}
+
+.btn-success{
+	border: none;
+	background-color: #218c74;
+	color: #d1ccc0;
+}
+.btn-success:hover{
+	background-color: #05c46b;
+	transition: 0.4s all ease;
+	cursor: pointer;
+}
+
+.btn-error{
+	border: none;
+	background-color: #b33939;
+	color: #d1ccc0;
+}
+.btn-error:hover{
+	background-color: #ff5252;
+	transition: 0.4s all ease;
+	cursor: pointer;
+}
+
+.btn-sm{
+	padding: 5px;
+}
+.btn-md{
+	padding: 10px;
+}
+.btn-lg{
+	padding: 15px;
+}
+
+/* CSS for Label */
+.tbl-responsive{
+	border: 1px solid black;
+	width: 96%;
+	text-align: left;
+	border-collapse: collapse;
+}
+.tbl-responsive tr, .tbl-responsive th, .tbl-responsive td{
+	border: 1px solid grey;
+	border-collapse: collapse;
+	padding: 1%;
+}
+
+/* CSS for Input */
+.input-label{
+	width: 30%;
+	float: left;
+}
+.input-group{
+	margin: 1%;
+}
+/* CSS for width */
+.quarter{
+	width: 25%;
+}
+.half{
+	width: 50%;
+}
+.full{
+	width: 100%;
+}
+
+/* CSS for Success and Error */
+.success{
+	background-color: #05c46b;
+	color: #ffffff;
+}
+.error{
+	background-color: #f53b57;
+	color: #ffffff;
 }
