@@ -7,6 +7,11 @@
 			echo $_SESSION['add'];
 			unset($_SESSION['add']);
 		}
+		if(isset($_SESSION['edit']))
+		{
+			echo $_SESSION['edit'];
+			unset($_SESSION['edit']);
+		}
 	?>
 	<table class="tbl-responsive">
 		<tr>

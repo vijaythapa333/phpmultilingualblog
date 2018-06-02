@@ -28,11 +28,11 @@
 		</div>
 		<div class="input-group">
 			<span class="input-label">Post Description (Nepali)</span>
-			<textarea class="half" name="description_np" placeholder="Post Description in English" required="true"></textarea>
+			<textarea class="half" name="description_np" placeholder="Post Description in Nepali" required="true"></textarea>
 		</div>
 		<div class="input-group">
 			<span class="input-label">Post Description (Chinese)</span>
-			<textarea class="half" name="description_cn" placeholder="Post Description in English" required="true"></textarea>
+			<textarea class="half" name="description_cn" placeholder="Post Description in Chinese" required="true"></textarea>
 		</div>
 
 		<div class="input-group">

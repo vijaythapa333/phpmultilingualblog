@@ -1,4 +1,5 @@
 <?php 
+	ob_start();
 	include('functions.php');
 
 	//Set Default Time Zone
