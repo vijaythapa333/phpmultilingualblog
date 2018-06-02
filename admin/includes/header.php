@@ -30,6 +30,9 @@
 						<a href="<?php echo SITEURL; ?>admin/index.php?page=posts"><?php echo $lang['posts'] ?></a>
 					</li>
 					<li>
+						<a href="<?php echo SITEURL; ?>admin/index.php?page=users"><?php echo $lang['users'] ?></a>
+					</li>
+					<li>
 						<a href="<?php echo SITEURL; ?>admin/index.php?page=logout"><?php echo $lang['logout'] ?></a>
 					</li>
 

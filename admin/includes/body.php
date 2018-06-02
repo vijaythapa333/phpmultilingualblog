@@ -8,7 +8,8 @@
 		{
 			$page="home";
 		}
-
+		include('pages/'.$page.'.php');
+		/*
 		switch ($page) {
 			case 'categories':
 				include('pages/'.$page.'.php');
@@ -25,6 +26,14 @@
 			case 'posts':
 				include('pages/'.$page.'.php');
 				break;
+
+			case 'add_post':
+				include('pages/'.$page.'.php');
+				break;
+
+			case 'edit_post':
+				include('pages/'.$page.'.php');
+				break;
 			
 			case 'logout':
 				session_destroy();
@@ -35,5 +44,6 @@
 				include('pages/'.$page.'.php');
 				break;
 		}
+		*/
 	?>
 </div>

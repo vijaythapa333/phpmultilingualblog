@@ -16,6 +16,7 @@
 		'read_more' => 'Read More',
 		'categories' => 'Categories',
 		'posts' => 'Posts',
+		'users' => 'Users',
 		'logout' => 'Logout',
 	);
 ?>

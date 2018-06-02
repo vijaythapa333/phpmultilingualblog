@@ -21,7 +21,7 @@
 	<table class="tbl-responsive">
 		<tr>
 			<td colspan="5">
-				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_post" class="btn-primary btn-sm">Add Post</a>
+				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_post"><button class="btn-primary btn-sm">Add Post</button></a>
 			</td>
 		</tr>
 		<tr>

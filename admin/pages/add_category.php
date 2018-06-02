@@ -35,7 +35,7 @@
 
 		<div class="input-group">
 			<span class="input-label">
-				<input type="submit" name="submit" value="Add Category" class="btn-success btn-sm">
+				<input type="submit" name="submit" value="Add Category" class="btn-primary btn-sm">
 			</span>
 		</div>
 		<br>
@@ -50,6 +50,7 @@
 			$title_cn = $obj->sanitize($conn,$_POST['title_cn']);
 			$is_active = $_POST['is_active'];
 			$include_in_menu = $_POST['include_in_menu'];
+			$created_at = date('Y-m-d H:i:s');
 
 			$tbl_name = 'tbl_categories';
 
@@ -58,7 +59,8 @@
 				title_np = '$title_np',
 				title_cn = '$title_cn',
 				is_active = '$is_active',
-				include_in_menu = '$include_in_menu'
+				include_in_menu = '$include_in_menu',
+				created_at = '$created_at'
 			";
 
 			$query = $obj->insert_data($tbl_name,$data);

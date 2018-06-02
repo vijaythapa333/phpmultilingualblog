@@ -62,7 +62,7 @@
 		<div class="input-group">
 			<span class="input-label">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
-				<input type="submit" name="submit" value="Update Category" class="btn-success btn-sm">
+				<input type="submit" name="submit" value="Update Category" class="btn-primary btn-sm">
 			</span>
 		</div>
 		<br>

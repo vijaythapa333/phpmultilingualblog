@@ -21,6 +21,8 @@ PHP和MySQLi中的多语言博客',
 		'categories' => '
 分类',
 		'posts' => '用品',
+		'users' => '
+用户',
 		'logout' => '登出',
 	);
 ?>
