@@ -1,0 +1,130 @@
+/*
+	Author: Vijay Thapa;
+	Theme: Multi-Lingual Blog;
+	Version: 1.0;
+*/
+
+/*CSS for All*/
+*{
+	margin: 0 0;
+	padding: 0 0;
+	font-family: sans-serif;
+	line-height: 25px;
+}
+.wrapper{
+	border: 1px solid red;
+	width: 80%;
+	padding: 1%;
+	margin: 0 auto;
+}
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+/* CSS for Buttons */
+.btn-default{
+	padding: 5px;
+}
+.btn-primary{
+	border: none;;
+	padding: 5px;
+	background-color: #474787;
+	color: #d1ccc0;
+	transition: 0.4s all ease;
+}
+.btn-primary:hover{
+	background-color: #706fd3;
+	transition: 0.4s all ease;
+}
+
+.btn-success{
+	padding: 5px;
+	background-color: #218c74;
+	color: #d1ccc0;
+}
+.btn-success:hover{
+	background-color: #33d9b2;
+	transition: 0.4s all ease;
+}
+
+.btn-error{
+	padding: 5px;
+	background-color: #b33939;
+	color: #d1ccc0;
+}
+.btn-error:hover{
+	background-color: #ff5252;
+	transition: 0.4s all ease;
+}
+
+.btn-sm{
+
+}
+.btn-md{
+	
+}
+.btn-lg{
+	
+}
+
+/* CSS for Header Section */
+.header{
+	background-color: #40407a;
+	color: #d1ccc0;
+}
+.header .logo{
+	width: 30%;
+	float: left;
+}
+.header .menu{
+	width: 60%;
+	float: right;
+}
+.header .menu ul{
+	list-style-type: none;
+}
+.header .menu ul li{
+	display: inline-block;
+	padding: 1%;
+}
+.header .menu ul li a{
+	color: #d1ccc0;
+	transition: 0.4s all ease;
+	text-decoration: none;
+}
+.header .menu ul li a:hover{
+	color: #ffffff;
+	transition: 0.4s all ease;
+	text-decoration: underline;
+}
+
+/* CSS for Main Body Here */
+.main{
+	margin: 5% auto;
+	
+}
+.main .body{
+	padding: 3%;
+	margin: 2% auto;
+	width: 75%;
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+}
+
+/* CSS for Footer */
+.footer{
+	background-color: #474787;
+	color: #f7f1e3;
+	text-align: center;
+}
+
+.footer a{
+	color: #ffda79;
+	text-decoration: none;
+	transition: 0.4s all ease;
+}
+.footer a:hover{
+	color: #ffb142;
+	transition: 0.4s all e
+}
