@@ -173,10 +173,14 @@
 .success{
 	background-color: #05c46b;
 	color: #ffffff;
+	text-align: center;
+	padding: 1%;
 }
 .error{
 	background-color: #f53b57;
 	color: #ffffff;
+	text-align: center;
+	padding: 1%;
 }
 
 /* CSS for Login */

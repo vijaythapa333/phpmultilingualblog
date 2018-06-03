@@ -24,7 +24,7 @@
 						<a href="<?php echo SITEURL; ?>"><?php echo $lang['home'] ?></a>
 					</li>
 					<li>
-						<a href="#"><?php echo $lang['about'] ?></a>
+						<a href="<?php echo SITEURL; ?>index.php?page=about"><?php echo $lang['about'] ?></a>
 					</li>
 
 					<?php 
