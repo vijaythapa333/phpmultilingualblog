@@ -18,6 +18,12 @@ Supported Languages
 2. Nepali
 3. Chinese
 
+Website at a Glance
+1. Login Page in Multiple Languages
+![Login Page in Multiple Languages](https://2.bp.blogspot.com/-CA4FX5Hwi3U/WxPmCuOdTxI/AAAAAAAAC_8/qT262sNVDLoGwLVw52uwao_uBVWKLp1-QCLcBGAs/s640/login.jpg)
+
+2. Home Page in Multiple Languages
+![Home Page in Multiple Languages](https://1.bp.blogspot.com/-y25Rh-R2zCA/WxPm3OT04XI/AAAAAAAADAM/KUFodhzRFLA7FKVGpoUIC_Tqpj_JPuWkwCLcBGAs/s640/Home%2BPage.jpg)
 
 Instructions to Use
 1. Download or clone the project from Github. ( CLICK HERE )
