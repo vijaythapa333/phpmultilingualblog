@@ -28,6 +28,7 @@
 					$description_en = $row['description_en'];
 					$description_np = $row['description_np'];
 					$description_cn = $row['description_cn'];
+					$category = $row['category'];
 					$is_active = $row['is_active'];
 					$is_featured = $row['is_featured'];
 				}
@@ -66,6 +67,36 @@
 		</div>
 
 		<div class="input-group">
+			<span class="input-label">Post Category</span>
+			<select class="half" name="category">
+				<?php 
+					$tbl_name = 'tbl_categories';
+					$query = $obj->select_data($tbl_name);
+					$res = $obj->execute_query($conn,$query);
+					if($res==true)
+					{
+						$count_rows = $obj->num_rows($res);
+						if($count_rows>0)
+						{
+							while ($row=$obj->fetch_data($res)) {
+								$cat_id=$row['id'];
+								$title=$row['title_'.$_SESSION['lang']];
+								?>
+								<option <?php if($category==$cat_id){echo"selected='selected'";} ?> value="<?php echo $cat_id; ?>"><?php echo $title; ?></option>
+								<?php
+							}
+						}
+						else{
+							?>
+							<option value="0">None</option>
+							<?php 
+						}
+					}
+				?>
+			</select>
+		</div>
+
+		<div class="input-group">
 			<span class="input-label">Is Active?</span>
 			<input <?php if($is_active=='Yes'){echo"checked='checked'";} ?> type="radio" name="is_active" value="Yes"> Yes
 			<input <?php if($is_active=='No'){echo"checked='checked'";} ?> type="radio" name="is_active" value="No"> No
@@ -94,28 +125,28 @@
 			$description_en = $obj->sanitize($conn,$_POST['description_en']);
 			$description_np = $obj->sanitize($conn,$_POST['description_np']);
 			$description_cn = $obj->sanitize($conn,$_POST['description_cn']);
+			$category = $obj->sanitize($conn,$_POST['category']);
 			$is_active = $obj->sanitize($conn,$_POST['is_active']);
 			$is_featured = $obj->sanitize($conn,$_POST['is_featured']);
 
 			$data = "
-				title_en = '$title_en',
-				title_np = '$title_np',
-				title_cn = '$title_cn',
-				description_en = '$description_en',
-				description_np = '$description_np',
-				description_cn = '$description_cn',
-				is_active = '$is_active',
-				is_featured = '$is_featured'
+				title_en='$title_en',
+				title_np='$title_np',
+				title_cn='$title_cn',
+				description_en='$description_en',
+				description_np='$description_np',
+				description_cn='$description_cn',
+				category='$category',
+				is_active='$is_active',
+				is_featured='$is_featured'
 			";
-
+			$where = "id='$id'";
 			$tbl_name = 'tbl_posts';
-			$where = "id = '$id'";
-
 			$query = $obj->update_data($tbl_name,$data,$where);
 			$res = $obj->execute_query($conn,$query);
-			if($res == true)
+			if($res==true)
 			{
-				$_SESSION['edit'] = "<div class='success'>Post Succcessfully Updated.</div>";
+				$_SESSION['edit'] = "<div class='success'>Post Successfully Updated.</div>";
 				header('location:'.SITEURL.'admin/index.php?page=posts');
 			}
 			else

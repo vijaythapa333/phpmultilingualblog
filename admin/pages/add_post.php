@@ -36,6 +36,36 @@
 		</div>
 
 		<div class="input-group">
+			<span class="input-label">Post Category</span>
+			<select class="half" name="category">
+				<?php 
+					$tbl_name = 'tbl_categories';
+					$query = $obj->select_data($tbl_name);
+					$res = $obj->execute_query($conn,$query);
+					if($res==true)
+					{
+						$count_rows = $obj->num_rows($res);
+						if($count_rows>0)
+						{
+							while ($row=$obj->fetch_data($res)) {
+								$id=$row['id'];
+								$title=$row['title_'.$_SESSION['lang']];
+								?>
+								<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+								<?php
+							}
+						}
+						else{
+							?>
+							<option value="0">None</option>
+							<?php 
+						}
+					}
+				?>
+			</select>
+		</div>
+
+		<div class="input-group">
 			<span class="input-label">Is Active?</span>
 			<input type="radio" name="is_active" value="Yes"> Yes
 			<input type="radio" name="is_active" value="No"> No
@@ -61,6 +91,7 @@
 			$description_en = $obj->sanitize($conn,$_POST['description_en']);
 			$description_np = $obj->sanitize($conn,$_POST['description_np']);
 			$description_cn = $obj->sanitize($conn,$_POST['description_cn']);
+			$category = $_POST['category'];
 			$is_active = $_POST['is_active'];
 			$is_featured = $_POST['is_featured'];
 			$created_at = date('Y-m-d H:i:s');
@@ -72,6 +103,7 @@
 				description_en='$description_en',
 				description_np='$description_np',
 				description_cn='$description_cn',
+				category='$category',
 				is_active='$is_active',
 				is_featured='$is_featured',
 				created_at='$created_at'

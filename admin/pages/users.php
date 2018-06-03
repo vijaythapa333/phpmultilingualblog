@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Users</h2>
+	<h2><?php echo $lang['users'] ?></h2>
 	<br>
 	<?php 
 		if(isset($_SESSION['add']))
