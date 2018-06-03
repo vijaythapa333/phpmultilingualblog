@@ -6,8 +6,13 @@
 			unset($_SESSION['login']);
 		}
 	?>
-	<h2>WElcome to MLB CMS.</h2>
+	<h2><?php echo $lang['welcome'] ?></h2>
+	<br>
 	<p>
-		You'll Manage Everything from Here.
+		<?php echo $lang['welcome_message'] ?>
 	</p>
+	<br>
+		<p>
+			<?php echo $lang['contact'] ?> <a href="mailto:hi@vijaythapa.com?Subject=multi-lingual%20website" target="_top">hi@vijaythapa.com</a>
+		</p>
 </div>

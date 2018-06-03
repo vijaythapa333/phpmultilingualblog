@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Panel - <?php echo $lang['title'] ?></title>
+	<title>Admin Panel - <?php echo $lang['meta_title'] ?></title>
 
 	<meta charset="utf-8">
-	<meta title="description" content="<?php echo $lang['description'] ?>">
-	<meta title="keywords" content="<?php echo $lang['keywords'] ?>">
+	<meta title="description" content="<?php echo $lang['meta_description'] ?>">
+	<meta title="keywords" content="<?php echo $lang['meta_keywords'] ?>">
 	<meta title="Author" content="<?php echo $lang['author'] ?>">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo SITEURL; ?>assets/css/style.css">

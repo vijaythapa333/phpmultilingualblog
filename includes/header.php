@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $lang['title'] ?></title>
+	<title><?php echo $lang['meta_title'] ?></title>
 
 	<meta charset="utf-8">
-	<meta title="description" content="Multi-Lingual Blog in PHP and MySQLi">
-	<meta title="keywords" content="Multi-Lingual,Blog,PHP,MySQLi">
-	<meta title="Author" content="Vijay Thapa">
+	<meta title="description" content="<?php echo $lang['meta_description'] ?>">
+	<meta title="keywords" content="<?php echo $lang['meta_keywords'] ?>">
+	<meta title="Author" content="<?php echo $lang['author'] ?>">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo SITEURL; ?>assets/css/style.css">
 </head>

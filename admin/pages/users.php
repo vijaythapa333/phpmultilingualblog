@@ -21,15 +21,15 @@
 	<table class="tbl-responsive">
 		<tr>
 			<td colspan="5">
-				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_user"><button class="btn-primary btn-sm">Add User</button></a>
+				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_user"><button class="btn-primary btn-sm"><?php echo $lang['add'] ?></button></a>
 			</td>
 		</tr>
 		<tr>
-			<th>S.N.</th>
-			<th>Full Name</th>
-			<th>Username</th>
-			<th>Is Active?</th>
-			<th>Actions</th>
+			<th><?php echo $lang['sn'] ?></th>
+			<th><?php echo $lang['full_name'] ?></th>
+			<th><?php echo $lang['username'] ?></th>
+			<th><?php echo $lang['is_active'] ?></th>
+			<th><?php echo $lang['actions'] ?></th>
 		</tr>
 
 		<?php 
@@ -53,10 +53,12 @@
 							<td><?php echo $sn++; ?>. </td>
 							<td><?php echo $full_name; ?></td>
 							<td><?php echo $username; ?></td>
-							<td><?php echo $is_active; ?></td>
 							<td>
-								<a href="<?php echo SITEURL; ?>admin/index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm">Edit</a> 
-								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm">Delete</a>
+								<?php if($is_active=='Yes'){echo $lang['yes'];}else if($is_active=='No'){echo $lang['no'];} ?>
+							</td>
+							<td>
+								<a href="<?php echo SITEURL; ?>admin/index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a> 
+								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
 							</td>
 						</tr>
 						<?php

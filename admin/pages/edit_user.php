@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Add User</h2>
+	<h2><?php echo $lang['edit_user'] ?></h2>
 	<?php 
 		if(isset($_SESSION['edit']))
 		{
@@ -36,35 +36,35 @@
 	?>
 	<form method="post" action="">
 		<div class="input-group">
-			<span class="input-label">Full Name</span>
+			<span class="input-label"><?php echo $lang['full_name'] ?></span>
 			<input class="half" type="text" name="full_name" value="<?php echo $full_name; ?>" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Email</span>
+			<span class="input-label"><?php echo $lang['email'] ?></span>
 			<input class="half" type="email" name="email" value="<?php echo $email; ?>" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Username</span>
+			<span class="input-label"><?php echo $lang['username'] ?></span>
 			<input class="half" type="text" name="username" value="<?php echo $username; ?>" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Password</span>
+			<span class="input-label"><?php echo $lang['password'] ?></span>
 			<input class="half" type="password" name="password" value="<?php echo $password; ?>" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Active?</span>
-			<input <?php if($is_active=='Yes'){echo "checked='checked'";} ?> type="radio" name="is_active" value="Yes"> Yes 
-			<input <?php if($is_active=='No'){echo "checked='checked'";} ?> type="radio" name="is_active" value="No"> No
+			<span class="input-label"><?php echo $lang['is_active'] ?></span>
+			<input <?php if($is_active=='Yes'){echo "checked='checked'";} ?> type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?> 
+			<input <?php if($is_active=='No'){echo "checked='checked'";} ?> type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
 		</div>
 
 		<div class="input-group">
 			<span class="input-label">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
-				<input class="btn-primary btn-sm" type="submit" name="submit" value="Update User">
+				<input class="btn-primary btn-sm" type="submit" name="submit" value="<?php echo $lang['edit_user'] ?>">
 			</span>
 		</div>
 		<br>
@@ -95,12 +95,12 @@
 
 			if($res==true)
 			{
-				$_SESSION['edit'] = "<div class='success'>User Successfully Updated.</div>";
+				$_SESSION['edit'] = "<div class='success'>".$lang['edit_success']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=users');
 			}
 			else
 			{
-				$_SESSION['edit'] = "<div class='error'>Failed to edit User.</div>";
+				$_SESSION['edit'] = "<div class='error'>".$lang['edit_fail']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=edit_user&id='.$id);
 			}
 		}

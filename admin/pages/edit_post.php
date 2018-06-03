@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Edit Post</h2>
+	<h2><?php echo $lang['edit_post'] ?></h2>
 	<br>
 	<?php 
 		if(isset($_SESSION['edit']))
@@ -41,33 +41,33 @@
 	?>
 	<form method="post" action="">
 		<div class="input-group">
-			<span class="input-label">Post Title (English)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['english'] ?>)</span>
 			<input class="half" type="text" name="title_en" value="<?php echo $title_en; ?>" required="true">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Title (Nepali)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['nepali'] ?>)</span>
 			<input class="half" type="text" name="title_np" value="<?php echo $title_np; ?>">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Title (Chinese)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['chinese'] ?>)</span>
 			<input class="half" type="text" name="title_cn" value="<?php echo $title_cn; ?>">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Post Description (English)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['english'] ?>)</span>
 			<textarea class="half" name="description_en" required="true"><?php echo $description_en; ?></textarea>
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Description (Nepali)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['nepali'] ?>)</span>
 			<textarea class="half" name="description_np"><?php echo $description_np; ?></textarea>
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Description (Chinese)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['chinese'] ?>)</span>
 			<textarea class="half" name="description_cn"><?php echo $description_cn; ?></textarea>
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Post Category</span>
+			<span class="input-label"><?php echo $lang['category'] ?></span>
 			<select class="half" name="category">
 				<?php 
 					$tbl_name = 'tbl_categories';
@@ -97,20 +97,20 @@
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Active?</span>
-			<input <?php if($is_active=='Yes'){echo"checked='checked'";} ?> type="radio" name="is_active" value="Yes"> Yes
-			<input <?php if($is_active=='No'){echo"checked='checked'";} ?> type="radio" name="is_active" value="No"> No
+			<span class="input-label"><?php echo $lang['is_active'] ?></span>
+			<input <?php if($is_active=='Yes'){echo"checked='checked'";} ?> type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?>
+			<input <?php if($is_active=='No'){echo"checked='checked'";} ?> type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Featured?</span>
-			<input <?php if($is_featured=='Yes'){echo"checked='checked'";} ?> type="radio" name="is_featured" value="Yes"> Yes
-			<input <?php if($is_featured=='No'){echo"checked='checked'";} ?> type="radio" name="is_featured" value="No"> No
+			<span class="input-label"><?php echo $lang['is_featured'] ?></span>
+			<input <?php if($is_featured=='Yes'){echo"checked='checked'";} ?> type="radio" name="is_featured" value="Yes"> <?php echo $lang['yes'] ?>
+			<input <?php if($is_featured=='No'){echo"checked='checked'";} ?> type="radio" name="is_featured" value="No"> <?php echo $lang['no'] ?>
 		</div>
 		<br>
 		<div class="input-group">
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
-			<input class="btn-primary btn-sm" type="submit" name="submit" value="Update Post">
+			<input class="btn-primary btn-sm" type="submit" name="submit" value="<?php echo $lang['edit_post'] ?>">
 		</div>
 	</form>
 
@@ -146,12 +146,12 @@
 			$res = $obj->execute_query($conn,$query);
 			if($res==true)
 			{
-				$_SESSION['edit'] = "<div class='success'>Post Successfully Updated.</div>";
+				$_SESSION['edit'] = "<div class='success'>".$lang['edit_success']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=posts');
 			}
 			else
 			{
-				$_SESSION['edit'] = "<div class='error'>Failed to Update Post.</div>";
+				$_SESSION['edit'] = "<div class='error'>".$lang['edit_fail']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=edit_post&id='.$id);
 			}
 		}

@@ -195,3 +195,23 @@
 	text-align: center;
 	font-weight: normal;
 }
+.login .language{
+	text-align: center;
+	margin-top: 10%;
+}
+.login .language ul{
+	list-style-type: none;
+}
+.login .language ul li{
+	display: inline-block;
+	padding-left: 5%;
+}
+.login .language ul li a{
+	text-decoration: none;
+	color: #1e3799;
+	transform: 0.4s all ease;
+}
+.login .language ul li a:hover{
+	color: #0a3d62;
+	transform: 0.4s all ease;
+}

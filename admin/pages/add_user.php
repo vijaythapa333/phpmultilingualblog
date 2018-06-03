@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Add User</h2>
+	<h2><?php echo $lang['add_user'] ?></h2>
 	<?php 
 		if(isset($_SESSION['add']))
 		{
@@ -9,34 +9,34 @@
 	?>
 	<form method="post" action="">
 		<div class="input-group">
-			<span class="input-label">Full Name</span>
+			<span class="input-label"><?php echo $lang['full_name'] ?></span>
 			<input class="half" type="text" name="full_name" placeholder="Your Full Name." required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Email</span>
+			<span class="input-label"><?php echo $lang['email'] ?></span>
 			<input class="half" type="email" name="email" placeholder="Your Email." required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Username</span>
+			<span class="input-label"><?php echo $lang['username'] ?></span>
 			<input class="half" type="text" name="username" placeholder="Your Username" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Password</span>
+			<span class="input-label"><?php echo $lang['password'] ?></span>
 			<input class="half" type="password" name="password" placeholder="Youre Secure Password" required="true">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Active?</span>
-			<input type="radio" name="is_active" value="Yes"> Yes 
-			<input type="radio" name="is_active" value="No"> No
+			<span class="input-label"><?php echo $lang['is_active'] ?></span>
+			<input type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?> 
+			<input type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
 		</div>
 
 		<div class="input-group">
 			<span class="input-label">
-				<input class="btn-primary btn-sm" type="submit" name="submit" value="Add User">
+				<input class="btn-primary btn-sm" type="submit" name="submit" value="<?php echo $lang['add_user'] ?>">
 			</span>
 		</div>
 		<br>
@@ -67,12 +67,12 @@
 
 			if($res==true)
 			{
-				$_SESSION['add'] = "<div class='success'>User Successfully Added.</div>";
+				$_SESSION['add'] = "<div class='success'>".$lang['add_success']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=users');
 			}
 			else
 			{
-				$_SESSION['add'] = "<div class='error'>Failed to Add New User.</div>";
+				$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=add_user');
 			}
 		}

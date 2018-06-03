@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Edit Category</h2>
+	<h2><?php echo $lang['edit_category'] ?></h2>
 
 	<?php 
 		if(isset($_SESSION['edit']))
@@ -37,32 +37,32 @@
 
 	<form method="post" action="">
 		<div class="input-group">
-			<span class="input-label">Category Title (English)</span> 
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['english'] ?>)</span> 
 			<input type="text" name="title_en" value="<?php echo $title_en; ?>" required="true" class="half">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Category Title (Nepali)</span> 
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['nepali'] ?>)</span> 
 			<input type="text" name="title_np" value="<?php echo $title_np; ?>"" class="half">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Category Title (Chinese)</span> 
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['chinese'] ?>)</span> 
 			<input type="text" name="title_cn" value="<?php echo $title_cn; ?>"" class="half">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Is Active?</span>
-			<input <?php if($is_active=='Yes'){echo "checked='checked'";} ?> type="radio" name="is_active" value="Yes"> Yes
-			<input <?php if($is_active=='No'){echo "checked='checked'";} ?> type="radio" name="is_active" value="No"> No
+			<span class="input-label"><?php echo $lang['is_active'] ?></span>
+			<input <?php if($is_active=='Yes'){echo "checked='checked'";} ?> type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?>
+			<input <?php if($is_active=='No'){echo "checked='checked'";} ?> type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
 		</div>
 		<div class="input-group">
-			<span class="input-label">Include in Menu?</span>
-			<input <?php if($include_in_menu=='Yes'){echo "checked='checked'";} ?> type="radio" name="include_in_menu" value="Yes"> Yes
-			<input <?php if($include_in_menu=='No'){echo "checked='checked'";} ?> type="radio" name="include_in_menu" value="No"> No
+			<span class="input-label"><?php echo $lang['include_in_menu'] ?></span>
+			<input <?php if($include_in_menu=='Yes'){echo "checked='checked'";} ?> type="radio" name="include_in_menu" value="Yes"> <?php echo $lang['yes'] ?>
+			<input <?php if($include_in_menu=='No'){echo "checked='checked'";} ?> type="radio" name="include_in_menu" value="No"> <?php echo $lang['no'] ?>
 		</div>
 
 		<div class="input-group">
 			<span class="input-label">
 				<input type="hidden" name="id" value="<?php echo $id; ?>">
-				<input type="submit" name="submit" value="Update Category" class="btn-primary btn-sm">
+				<input type="submit" name="submit" value="<?php echo $lang['edit_category'] ?>" class="btn-primary btn-sm">
 			</span>
 		</div>
 		<br>
@@ -97,13 +97,13 @@
 			if($res==true)
 			{
 				//Category Successfully Added
-				$_SESSION['add'] = "<div class='success'>Category successfully updated.</div>";
+				$_SESSION['add'] = "<div class='success'>".$lang['edit_success']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=categories');
 			}
 			else
 			{
 				//Failed to Add Categoy
-				$_SESSION['add'] = "<div class='error'>Failed to Update Categoy.</div>";
+				$_SESSION['add'] = "<div class='error'>".$lang['edit_fail']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=edit_category&id='.$id);
 			}
 		}

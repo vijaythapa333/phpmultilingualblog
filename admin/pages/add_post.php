@@ -1,5 +1,5 @@
 <div class="body">
-	<h2>Add Post</h2>
+	<h2><?php echo $lang['add_post'] ?></h2>
 	<br>
 	<?php 
 		if(isset($_SESSION['add']))
@@ -10,33 +10,33 @@
 	?>
 	<form method="post" action="">
 		<div class="input-group">
-			<span class="input-label">Post Title (English)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['english'] ?>)</span>
 			<input class="half" type="text" name="title_en" placeholder="Post Title in English" required="true">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Title (Nepali)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['nepali'] ?>)</span>
 			<input class="half" type="text" name="title_np" placeholder="Post Title in Nepali">
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Title (Chinese)</span>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['chinese'] ?>)</span>
 			<input class="half" type="text" name="title_cn" placeholder="Post Title in Chinese">
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Post Description (English)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['english'] ?>)</span>
 			<textarea class="half" name="description_en" placeholder="Post Description in English" required="true"></textarea>
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Description (Nepali)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['nepali'] ?>)</span>
 			<textarea class="half" name="description_np" placeholder="Post Description in Nepali" required="true"></textarea>
 		</div>
 		<div class="input-group">
-			<span class="input-label">Post Description (Chinese)</span>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['chinese'] ?>)</span>
 			<textarea class="half" name="description_cn" placeholder="Post Description in Chinese" required="true"></textarea>
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Post Category</span>
+			<span class="input-label"><?php echo $lang['category'] ?></span>
 			<select class="half" name="category">
 				<?php 
 					$tbl_name = 'tbl_categories';
@@ -66,19 +66,19 @@
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Active?</span>
-			<input type="radio" name="is_active" value="Yes"> Yes
-			<input type="radio" name="is_active" value="No"> No
+			<span class="input-label"><?php echo $lang['is_active'] ?></span>
+			<input type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?>
+			<input type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
 		</div>
 
 		<div class="input-group">
-			<span class="input-label">Is Featured?</span>
-			<input type="radio" name="is_featured" value="Yes"> Yes
-			<input type="radio" name="is_featured" value="No"> No
+			<span class="input-label"><?php echo $lang['is_featured'] ?></span>
+			<input type="radio" name="is_featured" value="Yes"> <?php echo $lang['yes'] ?>
+			<input type="radio" name="is_featured" value="No"> <?php echo $lang['no'] ?>
 		</div>
 		<br>
 		<div class="input-group">
-			<input class="btn-primary btn-sm" type="submit" name="submit" value="Add Post">
+			<input class="btn-primary btn-sm" type="submit" name="submit" value="<?php echo $lang['add_post'] ?>">
 		</div>
 	</form>
 
@@ -115,12 +115,12 @@
 
 			if($res == true)
 			{
-				$_SESSION['add'] = "<div class='success'>New Post Successfully Added.</div>";
+				$_SESSION['add'] = "<div class='success'>".$lang['add_success']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=posts');
 			}
 			else
 			{
-				$_SESSION['add'] = "<div class='error'>Failed to add new post.</div>";
+				$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
 				header('location:'.SITEURL.'admin/index.php?page=add_post');
 			}
 		}
