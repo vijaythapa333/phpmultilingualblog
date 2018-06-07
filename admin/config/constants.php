@@ -1,5 +1,5 @@
 <?php 
-	define('SITEURL', 'http://localhost:81/phpmultilingualblog/');
+	define('SITEURL', 'http://localhost:8080/phpmultilingualblog/');
 	define('LOCALHOST', 'localhost');
 	define('USERNAME', 'root');
 	define('PASSWORD', '');

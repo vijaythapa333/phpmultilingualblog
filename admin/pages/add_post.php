@@ -91,6 +91,7 @@
 			$description_en = $obj->sanitize($conn,$_POST['description_en']);
 			$description_np = $obj->sanitize($conn,$_POST['description_np']);
 			$description_cn = $obj->sanitize($conn,$_POST['description_cn']);
+			$url = strtolower(str_replace(' ', '-', $title_en));
 			$category = $_POST['category'];
 			$is_active = $_POST['is_active'];
 			$is_featured = $_POST['is_featured'];
@@ -103,6 +104,7 @@
 				description_en='$description_en',
 				description_np='$description_np',
 				description_cn='$description_cn',
+				url = '$url',
 				category='$category',
 				is_active='$is_active',
 				is_featured='$is_featured',
