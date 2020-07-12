@@ -1,50 +1,100 @@
-# phpmultilingualblog - Website in Multiple Languages (English, Nepali, Chinese)
-Simple blog in PHP and MySQLi supporting multi languages.
+# Multiple Language Website in PHP & MySQL (English, Nepali, Chinese)
 This is a simple blog website which supports multi-languages (english, nepali and chinese). This is just for educational purpose (not for commercial use).
 This is an Open Source Project, So feel free to explore (use) in any ways you like.
-Technologies Used
-HTML5
-CSS3
-PHP
-MySQLi
-Features
-1. Custom Categories Manager
-2. Custom Posts Manager
-3. Manage Users Manager
+
+## Support Developer
+1. Subscribe & Share my YouTube Channel - https://bit.ly/vijay-thapa-online-courses
+2. Add a Star 🌟  to this 👆 Repository
+
+
+## Technologies Used
+1. HTML5
+2. CSS3
+3. PHP (OOP)
+4. MySQLi 
+
+
+## Features
+1. Categories Manager
+2. Posts Manager
+3. Users Manager
 4. Secure Login in Multiple Languages
 
-Supported Languages
+# Supported Languages
 1. English
 2. Nepali
 3. Chinese
 
-Website at a Glance
+*(You can Add More...)*
+
+## Website at a Glance
 1. Login Page in Multiple Languages
 ![Login Page in Multiple Languages](https://2.bp.blogspot.com/-CA4FX5Hwi3U/WxPmCuOdTxI/AAAAAAAAC_8/qT262sNVDLoGwLVw52uwao_uBVWKLp1-QCLcBGAs/s640/login.jpg)
 
-2. Home Page in Multiple Languages
-![Home Page in Multiple Languages](https://1.bp.blogspot.com/-y25Rh-R2zCA/WxPm3OT04XI/AAAAAAAADAM/KUFodhzRFLA7FKVGpoUIC_Tqpj_JPuWkwCLcBGAs/s640/Home%2BPage.jpg)
+## Instructions to Use
 
-Instructions to Use
-1. Download or clone the project from Github. ( CLICK HERE )
-2. Now extract the files in your root directory (if in server) or inside htdocs in local server (i.e. XAMPP, WAMPP, LAMPP)
-3. Extract the database from mlb2018.rar.
-4. Now go to phpmyadmin and create a database named 'mlb2018' then import the database.
-5. Now, go to the root directory, then open admin folder, again open config folder.
-6. Then open constants.php file.
-7. Now change the value of constants SITEURL, LOCALHOST, DBNAME, USERNAME and PASSWORD.
+### Pre-Requisites:
 
-Here
-1. SITEURL - It is the URL for your website e.g. http://localhost:81/phpmultilingualblog/ . It might be different for you.
-2. LOCALHOST - It is a Server Name (If you don't know about it, then don't make the changes).
-3. DBNAME - Name of your database for the website.
-4. USERNAME - Username to connect database.
-5. PASSWORD - Password to connect database.
+1. Download and Install XAMPP
 
-CMS - Admin Panel
-This is a very simple Content Management System (No advanced stuffs). Instructions to use
-1. Go to the link -> yourhomeurl/admin  e.g. http://localhost:81/phpmultilingualblog/admin
-2. Login with the Username and Password [Username: admin, Password: admin]
+[Click Here to Download](https://www.apachefriends.org/index.html)
+
+2. Install any Text Editor (Sublime Text or Visual Studio Code or Atom or Brackets)
+
+### Installtion
+
+1. Download as as Zip or Clone this project
+2. Extract and Move this project to Root Directory
+```
+Local Disc C: -> xampp -> htdocs -> 'this project'
+```
+*Local Disk C is the location where xampp was installed*
+
+3. Open XAMPP Control Panel and Start 'Apache' and 'MySQL'
+
+4. Extract and Import Database
+
+a. Open 'phpmyadmin' in your browser
+b. Create a Database ('mlb2018')
+c. Import the SQL file provided with this project ('mlb2018')
+
+5. Make Changes to settings
+
+Go to 'admin' folder then'config' folder and Open 'constants.php' file. Then make changes on following constants
+```php
+<?php 
+//Start Session
+session_start();
+
+//Create Constants to save Database Credentials
+define('LOCALHOST', 'localhost');
+define('USERNAME', 'root'); //Your Database username instead of 'root'
+define('PASSWORD', ''); //Your Database Password instead of null/empty
+define('DBNAME', 'mlb2018'); //Your Database Name if it's not 'mlb2018'
+
+define('SITEURL', 'http://localhost/phpmultilingualblog/'); //Update the home URL of the project if you have changed port number or it's live on server
+
+?>
+```
+
+6. Now, Open the project in your browser. It should run perfectly.
+
+
+## CMS - Admin Panel
+This is a very simple Content Management System (No advanced stuffs). 
+
+**Instructions to use**
+1. Go to the link -> yourhomeurl/admin  
+>e.g. *http://localhost:81/phpmultilingualblog/admin*
+2. Login with the Username and Password 
+>*[Username: admin, Password: admin]*
 3. Hola! You're logged in. Now you can manage categories, posts and users.
 
-For Further Query, Email me at  hi@vijaythapa.com.
+## For Sponsor or Projects Enquiry
+1. Email - hi@vijaythapa.com
+
+## Follow Me on
+1. LinkedIn - [vijaythapa](https://www.linkedin.com/in/vijaythapa/ "Vijay Thapa on LinkedIn")
+2. Instagram - [@vijaythapa.code](https://www.instagram/vijaythapa.code/ "Vijay Thapa on Instagram")
+3. Facebook - [@thevijaythapa](https://www.facebook.com/thevijaythapa/ "Vijay Thapa on Facebook")
+5. Twitter - [@thevijaythapa](https://www.twitter.com/thevijaythapa "Vijay Thapa on Twitter")
