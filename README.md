@@ -28,7 +28,7 @@ This is an Open Source Project, So feel free to explore (use) in any ways you li
 *(You can Add More...)*
 
 ## Website at a Glance
-1. Login Page in Multiple Languages
+
 ![Login Page in Multiple Languages](https://2.bp.blogspot.com/-CA4FX5Hwi3U/WxPmCuOdTxI/AAAAAAAAC_8/qT262sNVDLoGwLVw52uwao_uBVWKLp1-QCLcBGAs/s640/login.jpg)
 
 ## Instructions to Use
