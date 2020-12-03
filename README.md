@@ -7,6 +7,15 @@ This is an Open Source Project, So feel free to explore (use) in any ways you li
 2. Add a Star 🌟  to this 👆 Repository
 
 
+## Donate
+
+**[PayPal](https://bit.ly/support-vijay-thapa)**
+
+**[Buy me a Coffee  ☕️](https://www.buymeacoffee.com/vijaythapa)**
+
+**Donate by wire transfer:** E-Mail at *donate@vijaythapa.com* for wire transfer details. 
+
+
 ## Technologies Used
 1. HTML5
 2. CSS3
